@@ -12,8 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron-builder": "^23.0.3",
+    "electron": "^18.0.3",
     "electron-updater": "^5.0.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.0.3"
   },
   "repository": {
     "type": "git",
