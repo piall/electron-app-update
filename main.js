@@ -26,13 +26,6 @@ autoUpdater.on('update-downloaded', () => {
   mainWindow.webContents.send('update_downloaded');
 });
 
-function closeNotification() {
-  notification.classList.add('hidden');
-}
-function restartApp() {
-  ipcRenderer.send('restart_app');
-}
-
 ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
