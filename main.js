@@ -8,14 +8,14 @@ let mainWindow;
 app.on('ready', function () {
   mainWindow = new BrowserWindow({});
   mainWindow.loadFile('index.html');
+
+  mainWindow.once('ready-to-show', () => {
+    autoUpdater.checkForUpdatesAndNotify();
+  });
 });
 
 ipcMain.on('app_version', (event) => {
   event.sender.send('app_version', { version: app.getVersion() });
-});
-
-mainWindow.once('ready-to-show', () => {
-  autoUpdater.checkForUpdatesAndNotify();
 });
 
 autoUpdater.on('update-available', () => {
