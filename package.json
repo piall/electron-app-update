@@ -1,6 +1,6 @@
 {
   "name": "electron",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron-log": "^4.4.6",
     "electron-updater": "^5.0.1"
   },
   "devDependencies": {
